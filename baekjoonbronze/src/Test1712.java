@@ -20,7 +20,7 @@ public class Test1712 {
 		long totalAB = 0; // 총 비용
 		long totalC = 0; // 총 수입
 		long number = 0; // 판 갯수
-		if(b >= c) { // 손익분기점이 없다면
+		if(b >= c) { // 손익분기점이 없다면 출력
 			System.out.println("-1"); // -1 출력
 		} else { // 1개 이상 판매할 수 있으니 else문이 돌아간다.
 			totalAB += a; // 고정비용을 먼저 총 비용 변수에 넣는다.
