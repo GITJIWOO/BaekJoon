@@ -14,21 +14,23 @@ public class Test1712 {
 		// A, B, C가 주어졌을 때, 손익분기점을 구하는 프로그램을 작성하시오.
 		// 첫 번째 줄에 손익분기점 즉 최초로 이익이 발생하는 판매량을 출력한다. 손익분기점이 존재하지 않으면 -1을 출력한다.
 		Scanner scan = new Scanner(System.in);
-		int a = scan.nextInt(); // 고정 비용
-		int b = scan.nextInt(); // 가변 비용
-		int c = scan.nextInt(); // 노트북 가격
-		long totalAB = 0; // 총 비용
-		long totalC = 0; // 총 수입
-		long number = 0; // 판 갯수
-		if(b >= c) { // 손익분기점이 없다면 출력
-			System.out.println("-1"); // -1 출력
-		} else { // 1개 이상 판매할 수 있으니 else문이 돌아간다.
-			totalAB += a; // 고정비용을 먼저 총 비용 변수에 넣는다.
-			while(true) { // 손익분기점을 넘을 때 까지 돌아간다.
-				totalAB += b; // 한 대를 팔았으니  총 비용에 가변비용을 넣는다. 
-				totalC += c; // 총 수입에 노트북 가격을 넣는다.
-				number++; // 판 갯수 +1
-				if(totalAB < totalC) { // 손익분기점을 넘었다면 멈춘다.
+		int a = scan.nextInt(); 	// 고정 비용
+		int b = scan.nextInt(); 	// 가변 비용
+		int c = scan.nextInt(); 	// 노트북 가격
+		
+		long totalAB = 0; 		// 총 비용
+		long totalC = 0; 		// 총 수입
+		long number = 0;		// 판 갯수
+		
+		if(b >= c) { 						// 손익분기점이 없다면 출력
+			System.out.println("-1"); 		// -1 출력
+		} else { 							// 1개 이상 판매할 수 있으니 else문이 돌아간다.
+			totalAB += a; 					// 고정비용을 먼저 총 비용 변수에 넣는다.
+			while(true) { 					// 손익분기점을 넘을 때 까지 돌아간다.
+				totalAB += b; 				// 한 대를 팔았으니  총 비용에 가변비용을 넣는다. 
+				totalC += c; 				// 총 수입에 노트북 가격을 넣는다.
+				number++; 					// 판 갯수 +1
+				if(totalAB < totalC) { 		// 손익분기점을 넘었다면 멈춘다.
 					System.out.println(number);
 					break;
 				}
